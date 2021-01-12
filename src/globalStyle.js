@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
 body {
     background: #1b1b1b;
+    font-family: 'Inter', sans-serif;
 }
 
 button {
@@ -55,7 +56,7 @@ a {
 }
 
 p {
-    padding: 3rem 0;
+    padding: 1rem 0 3rem 0;
     color: #ccc;
     font-size: 1.4rem;
     line-height: 150%;

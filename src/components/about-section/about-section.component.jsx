@@ -1,15 +1,15 @@
 import React from "react";
 
 import {
-  StyledAboutContainer,
+  StyledLayout,
   StyledDescription,
   StyledImage,
   StyledHiddenElement,
-} from "./about-section.styles";
+} from "../../styles";
 
 const AboutSection = () => {
   return (
-    <StyledAboutContainer>
+    <StyledLayout>
       <StyledDescription>
         <div className='title'>
           <StyledHiddenElement>
@@ -36,7 +36,7 @@ const AboutSection = () => {
           alt='guy holding a camera'
         />
       </StyledImage>
-    </StyledAboutContainer>
+    </StyledLayout>
   );
 };
 
