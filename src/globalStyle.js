@@ -54,6 +54,7 @@ span {
 a {
     font-size: 1.1.rem;
     text-decoration: none;
+    color: #fff;
 }
 
 p {
