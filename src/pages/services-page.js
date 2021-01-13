@@ -21,7 +21,8 @@ import TransitionAnimation from "../components/transition-animation/transition-a
 import { useScroll } from "../hooks/useScroll";
 
 const ServicesPage = () => {
-  const [element, controls] = useScroll();
+  const [element1, controls1] = useScroll();
+  const [element2, controls2] = useScroll();
 
   return (
     <StyledServicesSection
