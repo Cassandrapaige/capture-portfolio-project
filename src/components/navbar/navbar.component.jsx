@@ -1,6 +1,6 @@
 import React from "react";
 
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { StyledNav } from "./navbar.styles";
 
@@ -8,17 +8,17 @@ const Navbar = () => {
   return (
     <StyledNav>
       <h1 id='logo'>
-        <NavLink to='/'>Capture</NavLink>
+        <Link to='/'>Capture</Link>
       </h1>
       <ul>
         <li>
-          <NavLink to='/'>1. About Us</NavLink>
+          <Link to='/'>1. About Us</Link>
         </li>
         <li>
-          <NavLink to='/services'>2. Our Work</NavLink>
+          <Link to='/services'>2. Our Work</Link>
         </li>
         <li>
-          <NavLink to='/contact'>3. Contact Us</NavLink>
+          <Link to='/contact'>3. Contact Us</Link>
         </li>
       </ul>
     </StyledNav>

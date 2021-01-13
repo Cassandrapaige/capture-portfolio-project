@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 //styles
 import { StyledDescription, StyledImage } from "../../styles";
@@ -9,9 +9,22 @@ import {
   StyledCard,
 } from "./services-section.styles";
 
+//animations
+import { scrollReveal } from "../../animations";
+
+// hooks
+import { useScroll } from "../../hooks/useScroll";
+
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
+
   return (
-    <StyledServicesLayout>
+    <StyledServicesLayout
+      ref={element}
+      variants={scrollReveal}
+      animate={controls}
+      initial='hidden'
+    >
       <StyledDescription>
         <h2>
           High <span>quality</span> services

@@ -1,5 +1,14 @@
 import React from "react";
 
+// animations
+import { motion } from "framer-motion";
+import {
+  titleAnimation,
+  fadeAnimation,
+  photoAnimation,
+} from "../../animations";
+
+//styles
 import {
   StyledLayout,
   StyledDescription,
@@ -7,35 +16,42 @@ import {
   StyledHiddenElement,
 } from "../../styles";
 
+// components
+import WaveAnimation from "../wave-animation/wave-animation.component";
+
 const AboutSection = () => {
   return (
     <StyledLayout>
       <StyledDescription>
-        <div className='title'>
+        <motion.div className='title'>
           <StyledHiddenElement>
-            <h2>We work to make</h2>
+            <motion.h2 variants={titleAnimation}>We work to make</motion.h2>
           </StyledHiddenElement>
+
           <StyledHiddenElement>
-            <h2>
+            <motion.h2 variants={titleAnimation}>
               your <span>dreams</span>
-            </h2>
+            </motion.h2>
           </StyledHiddenElement>
+
           <StyledHiddenElement>
-            <h2>come true.</h2>
+            <motion.h2 variants={titleAnimation}>come true.</motion.h2>
           </StyledHiddenElement>
-        </div>
-        <p>
+        </motion.div>
+        <motion.p variants={fadeAnimation}>
           Contact us for any photography ideas you have. We have many
           professionals with amazing skills.
-        </p>
-        <button>Contact Us</button>
+        </motion.p>
+        <motion.button variants={fadeAnimation}>Contact Us</motion.button>
       </StyledDescription>
       <StyledImage>
-        <img
+        <motion.img
+          variants={photoAnimation}
           src='https://images.unsplash.com/photo-1603351679592-f11af144e80d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzR8fGd1eSUyMHdpdGglMjBjYW1lcmF8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60'
           alt='guy holding a camera'
         />
       </StyledImage>
+      <WaveAnimation />
     </StyledLayout>
   );
 };

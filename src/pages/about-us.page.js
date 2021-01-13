@@ -5,13 +5,22 @@ import AboutSection from "../components/about-section/about-section.component";
 import FaqSection from "../components/faq-section/faq-section.component";
 import ServicesSection from "../components/services-section/services-section.component";
 
+// animations
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animations";
+
 const AbousUsPage = () => {
   return (
-    <main>
+    <motion.main
+      exit='exit'
+      variants={pageAnimation}
+      initial='hidden'
+      animate='show'
+    >
       <AboutSection />
       <ServicesSection />
       <FaqSection />
-    </main>
+    </motion.main>
   );
 };
 

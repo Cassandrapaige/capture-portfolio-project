@@ -1,4 +1,5 @@
-import { Route, Switch } from "react-router-dom";
+// router
+import { Route, Switch, useLocation } from "react-router-dom";
 
 // styles
 import GlobalStyle from "./globalStyle";
@@ -10,17 +11,25 @@ import ServicesPage from "./pages/services-page";
 
 //components
 import Navbar from "./components/navbar/navbar.component";
+import ProductDetailsPage from "./pages/product-details-page";
+
+//animation
+import { AnimatePresence } from "framer-motion";
 
 const App = () => {
+  const location = useLocation();
   return (
     <div className='App'>
       <GlobalStyle />
       <Navbar />
-      <Switch>
-        <Route exact path='/' component={AbousUsPage} />
-        <Route path='/contact' component={ContactPage} />
-        <Route path='/services' component={ServicesPage} />
-      </Switch>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
+          <Route exact path='/' component={AbousUsPage} />
+          <Route path='/contact' component={ContactPage} />
+          <Route exact path='/services' component={ServicesPage} />
+          <Route path='/services/:id' component={ProductDetailsPage} />
+        </Switch>
+      </AnimatePresence>
     </div>
   );
 };

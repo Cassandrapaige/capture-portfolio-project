@@ -21,7 +21,7 @@ export const StyledFAQLayout = styled(StyledLayout)`
   }
 
   .question {
-    padding: 3rem 0;
+    padding: 1rem 0;
     cursor: pointer;
   }
 

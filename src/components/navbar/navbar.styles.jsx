@@ -8,6 +8,9 @@ export const StyledNav = styled.nav`
   align-items: center;
   padding: 1rem 10rem;
   background: #282828;
+  z-index: 300;
+  position: sticky;
+  top: 0;
 
   #logo {
     font-family: "Lobster", cursive;
@@ -18,6 +21,7 @@ export const StyledNav = styled.nav`
   ul {
     display: flex;
     list-style-type: none;
+    flex-wrap: wrap;
 
     li {
       padding-left: 10rem;
