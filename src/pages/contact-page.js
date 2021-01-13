@@ -76,6 +76,7 @@ const StyledCircle = styled.div`
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
-  background: #23d997;
+  background: #333;
 `;
+
 export default ContactPage;

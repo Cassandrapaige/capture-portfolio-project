@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 // router
 import { Route, Switch, useLocation } from "react-router-dom";
 
@@ -18,6 +19,13 @@ import { AnimatePresence } from "framer-motion";
 
 const App = () => {
   const location = useLocation();
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 400);
+  }, [location]);
+
   return (
     <div className='App'>
       <GlobalStyle />
